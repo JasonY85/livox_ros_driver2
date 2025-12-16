@@ -1,6 +1,8 @@
 ## ATTENTION
 
-This repository is a modified version of the original livox_ros_driver2 for ROS2 humble
+This repository is a modified version of the original **livox_ros_driver2** for **ROS2 humble**
+
+This **livox_ros_driver2** is placed in your workspace.
 
 Compared to the original version, the message publishing mechanism and the IP in ```MID360_config.json``` have been modified.
 
@@ -16,55 +18,48 @@ Compared to the original version, the message publishing mechanism and the IP in
 
 ### 1.1 OS requirements
 
-  * Ubuntu 22.04 for ROS2 Humble;
+  * Ubuntu 22.04 for **ROS2 humble**;
 
 ### 1.2 Install ROS2 Humble
 
-For ROS2 Humble installation, please refer to:
+For **ROS2 humble** installation, please refer to:
 [ROS Humble installation instructions](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 
 Desktop-Full installation is recommend.
 
 ## 2. Build & Run Livox ROS Driver 2
 
-### 2.1 Clone Livox ROS Driver 2 source code:
-
-```shell
-git clone https://github.com/JasonY85/livox_ros_driver2.git
-```
-
-  **Note :**
-
-  Be sure to clone the source code in a '[workspace]/src/' folder (as shown above), otherwise compilation errors will occur due to the compilation tool restriction.
-
-### 2.2 Build & install the Livox-SDK2
+### 2.1 Build & install the Livox-SDK2
 
   **Note :**
 
   Please follow the guidance of installation in the [Livox-SDK2/README.md](https://github.com/Livox-SDK/Livox-SDK2/blob/master/README.md)
 
-### 2.3 Build the Livox ROS Driver 2:
+### 2.2 Clone Livox ROS Driver 2 source code and colcon build:
 
-### For ROS2 Humble:
-```shell
+```bash
+cd ~/ros2_ws/src  # cd into a workspace folder
+git clone https://github.com/JasonY85/livox_ros_driver2.git -b ROS2
+cd ..
 colcon build --symlink-install
+source install/setup.sh
 ```
 
 ### 2.4 Run Livox ROS Driver 2:
 
 ```shell
-source install/setup.sh
+source ~/ros2_ws/install/setup.sh
 ros2 launch livox_ros_driver2 [launch file]
 ```
 
 in which,  
 
-* **[launch file]** : is the ROS2 launch file you want to use; the 'launch' folder contains several launch samples for your reference.
+* **[launch file]** : is the ROS2 launch file you want to use; the **'launch'** folder contains several launch samples for your reference.
 
-A rviz launch example for HAP LiDAR would be:
+A rviz launch example for MID360 LiDAR would be:
 
 ```shell
-ros2 launch livox_ros_driver2 rviz_HAP_launch.py
+ros2 launch livox_ros_driver2 msg_MID360_launch.py
 ```
 
 ## 3. Launch file and livox_ros_driver2 internal parameter configuration instructions
