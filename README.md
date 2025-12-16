@@ -1,16 +1,17 @@
 # ATTENTION
 
-This repository is a modified version of the original livox_ros_driver2 for ROS noetic
+This repository is a modified version of the original **livox_ros_driver2** for **ROS noetic**
+This **livox_ros_driver2** is placed in your workspace.
 
 ## 1. Preparation
 
 ### 1.1 OS requirements
 
-  * Ubuntu 20.04 for ROS Noetic;
+  * Ubuntu 20.04 for **ROS Noetic**;
 
 ### 1.2 Install ROS & ROS2
 
-For ROS Noetic installation, please refer to:
+For **ROS Noetic** installation, please refer to:
 [ROS Noetic installation instructions](https://wiki.ros.org/noetic/Installation)
 
 Desktop-Full installation is recommend.
@@ -43,7 +44,7 @@ roslaunch livox_ros_driver2 [launch file]
 in which,  
 
 * **livox_ros_driver2** : is the ROS package name of Livox ROS Driver 2;
-* **[launch file]** : is the ROS launch file you want to use; the 'launch' folder contains several launch samples for your reference;  
+* **[launch file]** : is the ROS launch file you want to use; the **'launch'** folder contains several launch samples for your reference;  
 
 An rviz launch example for MID360 LiDAR would be:
 
