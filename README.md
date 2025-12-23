@@ -39,7 +39,7 @@ Desktop-Full installation is recommend.
 
 ```bash
 cd ~/ros2_ws/src  # cd into a workspace folder
-git clone https://github.com/JasonY85/livox_ros_driver2.git -b ROS2
+git clone https://github.com/JasonY85/livox_ros_driver2.git -b humble
 cd ..
 colcon build --symlink-install
 source install/setup.sh
