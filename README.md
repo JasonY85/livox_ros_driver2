@@ -29,7 +29,7 @@ Desktop-Full installation is recommend.
 
 ```bash
 cd ~/catkin_ws/src  # cd into a catkin workspace folder
-git clone https://github.com/JasonY85/livox_ros_driver2.git -b ROS1
+git clone https://github.com/JasonY85/livox_ros_driver2.git -b noetic
 cd ..
 catkin_make
 source devel/setup.bash
